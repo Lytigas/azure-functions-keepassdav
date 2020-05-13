@@ -48,3 +48,7 @@ The total cost of 5 years of API calls will be around:
 Interesting tidbit: The data is so small that the cost of a lifecycle rule to migrate old versions to the Standard IA tier is actually more than paying the higher storage cost for 24 months. Also, Standard IA charges at least 128KB per object, which costs more than 33KB at the Standard tier.
 
 I suppose in 2 years I might write a batch job that puts old versions into a tar archive and uploads them as one Standard IA object to save on storage costs.
+
+## Automatic Backup
+
+Keepass2 has built-in [trigger](https://keepass.info/help/v2/triggers.html) functionality that I use to synchronize the database to S3 on save. Since S3 versioning is on, this also creates a persistent backup. I store the URL and HTTP basic authentication credentials in the Keepass database and extract them using [field references](https://keepass.info/help/base/fieldrefs.html). If you write your own sync-on-save trigger, be careful of [infinite loops](https://keepass.info/help/kb/trigger_examples.html#infiniteloop). A copy of mine is in [`sync-on-save.keepasstrigger.xml`](sync-on-save.keepasstrigger.xml).

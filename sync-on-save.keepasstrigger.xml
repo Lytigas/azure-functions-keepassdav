@@ -1,0 +1,38 @@
+<Trigger>
+    <Guid>Do9gMxbJdUiBN+f8ckLWgw==</Guid>
+    <Name>Synchronize main.kdbx on save</Name>
+    <Events>
+        <Event>
+            <TypeGuid>s6j9/ngTSmqcXdW6hDqbjg==</TypeGuid>
+            <Parameters>
+                <Parameter>3</Parameter>
+                <Parameter>main.kdbx</Parameter>
+            </Parameters>
+        </Event>
+    </Events>
+    <Conditions />
+    <Actions>
+        <Action>
+            <TypeGuid>tkamn96US7mbrjykfswQ6g==</TypeGuid>
+            <Parameters>
+                <Parameter />
+                <Parameter>0</Parameter>
+            </Parameters>
+        </Action>
+        <Action>
+            <TypeGuid>Iq135Bd4Tu2ZtFcdArOtTQ==</TypeGuid>
+            <Parameters>
+                <Parameter>{REF:A@N:TRIGGER_SEARCH_REF_127938172}</Parameter>
+                <Parameter>{REF:U@N:TRIGGER_SEARCH_REF_127938172}</Parameter>
+                <Parameter>{REF:P@N:TRIGGER_SEARCH_REF_127938172}</Parameter>
+            </Parameters>
+        </Action>
+        <Action>
+            <TypeGuid>tkamn96US7mbrjykfswQ6g==</TypeGuid>
+            <Parameters>
+                <Parameter />
+                <Parameter>1</Parameter>
+            </Parameters>
+        </Action>
+    </Actions>
+</Trigger>
