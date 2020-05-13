@@ -3,3 +3,4 @@
 local.settings.json
 test
 Makefile
+sync-on-save.keepasstrigger.xml
