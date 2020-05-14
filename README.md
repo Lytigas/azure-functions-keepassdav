@@ -37,7 +37,7 @@ I have a couple hundred entries in my .kdbx, and it's 33K. Azure Functions has a
 5 * 365 * 5 * 2 * 50 * 0.025 / 1000 / 1000 = $0.0228125
 ```
 
-The extra factor of two accounts for Keepass saving to a temporary file and then MOVE-ing it to the correct location. Since you can't version only one object in S3, you have to the cost of those versions.
+The extra factor of two accounts for Keepass saving to a temporary file and then MOVE-ing it to the correct location. Since you can't version only one object in S3, you have to eat the cost of old versions of the temporary file. It's possible to special-case Keepass beheavior and manually remove those, but I haven't implemented that.
 
 The total cost of 5 years of API calls will be around:
 
